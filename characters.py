@@ -5,9 +5,7 @@ class Character():
         self.tainted = tainted
 
 # Declaration of the full list of characters
-class Characters():
-    
-    list = [Character("Isaac", False),
+list = [Character("Isaac", False),
             Character("Magdalene", False),
             Character("Cain", False),
             Character("Judas", False),

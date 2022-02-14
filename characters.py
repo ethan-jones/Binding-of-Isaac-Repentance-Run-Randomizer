@@ -1,8 +1,10 @@
+# Character class with name and whether they are Tainted or not
 class Character():
     def __init__(self, name, tainted):
         self.name = name
         self.tainted = tainted
 
+# Declaration of the full list of characters
 class Characters():
     
     list = [Character("Isaac", False),

@@ -2,9 +2,18 @@ import tkinter as tk
 from tkinter import *
 
 window = tk.Tk()
+chrValues = []
 
 window.title("The Binding of Isaac: Repentance Randomizer")
 window.resizable(width=False, height=False)
+
+# Functions
+def randomizeCharacters():
+    print("Test")
+
+def confirmSelection():
+    print("Test")
+        
 
 canvas = tk.Canvas(window, height=800, width=800, bg="#E9E7DF")
 canvas.pack()
@@ -12,6 +21,7 @@ canvas.pack()
 checkBoxes = tk.Frame(window, bg="white")
 checkBoxes.place(relwidth=0.825, relheight=0.825, relx=0.08, rely=0.05)
 
+# Regular Character Checkboxes
 chrIsaac = tk.IntVar()
 chrIsaacBox = tk.Checkbutton(checkBoxes, text="Isaac",
                        variable=chrIsaac, onvalue=1, offvalue=0, bg="white")
@@ -97,11 +107,14 @@ chrJacobBox = tk.Checkbutton(checkBoxes, text="Jacob and Esau",
                        variable=chrJacob, onvalue=1, offvalue=0, bg="white")
 chrJacobBox.grid(row=16, sticky=W)
 
+# Tainted Character Checkboxes
 chrTIsaac = tk.IntVar()
 chrTIsaacBox = tk.Checkbutton(checkBoxes, text="Tainted Isaac",
                        variable=chrTIsaac, onvalue=1, offvalue=0, bg="white")
 chrTIsaacBox.grid(row=0, column=1, sticky=W)
 
+confirm = tk.Button(window, text="Confirm Selection")
+confirm.pack()
 
 randomize = tk.Button(window, text="Randomize")
 randomize.pack()
